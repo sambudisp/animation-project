@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDEDED"
+        android:clickable="true"
+        android:transitionName="search_top"
+        android:focusable="true"
+        android:paddingBottom="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edt_pencarian"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="22dp"
+            android:background="@drawable/bg_edt_search"
+            android:clickable="true"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+            android:focusable="false"
+            android:gravity="start|center"
+            android:imeOptions="actionSearch"
+            android:inputType="textVisiblePassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="72dp"
+            android:singleLine="true"
+            android:text="Masukan nopol"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/div_search_1"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="8dp"
+            android:background="#EDEDED"
+            app:layout_constraintBottom_toBottomOf="@id/edt_pencarian"
+            app:layout_constraintEnd_toStartOf="@id/img_btn_search"
+            app:layout_constraintTop_toTopOf="@id/edt_pencarian" />
+
+        <ImageView
+            android:id="@+id/img_btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/edt_pencarian"
+            app:layout_constraintEnd_toEndOf="@id/edt_pencarian"
+            app:layout_constraintTop_toTopOf="@id/edt_pencarian"
+            app:srcCompat="@drawable/ic_search" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
